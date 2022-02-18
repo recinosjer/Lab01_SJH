@@ -1,0 +1,16 @@
+﻿@model List<Player>
+    
+
+@{
+    ViewData["Title"] = "Subir archivo CSV";
+}
+<h2> @ViewData["Title"]</h2>
+@using (Html.BeginForm("SubirArchivos","Player",
+FormMethod.Post,
+new {enctype="multipart/form-data"} ))
+{
+   <label form="file"> Subir Archivo</label>
+   <input type="file"Name="file" LName="file"Team="file"Rol="file"KDA="file"CS="file"/>
+   <input type ="submit"value="Enviar"/>
+
+}
