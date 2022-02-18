@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lab01_SJH.Controllers
 {
+    [Route("[controller]")]
     public class PlayerController : Controller
     {
         List<Player> playersList = new List<Player>();
@@ -27,14 +28,14 @@ namespace Lab01_SJH.Controllers
         }
 
         [Route("SubirArchivo")]
-        public IActionResult subirArchivos()
+        public IActionResult SubirArchivo()
         {
             return View();
         }
 
 
         [HttpPost("SubirArchivo")]
-        public IActionResult subirArchivos(IFormFile file)
+        public IActionResult SubirArchivo(IFormFile file)
         {
             if (file != null)
             {
