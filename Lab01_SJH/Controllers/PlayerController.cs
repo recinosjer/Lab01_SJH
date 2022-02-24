@@ -45,6 +45,10 @@ namespace Lab01_SJH.Controllers
         {
             return View();
         }
+        public IActionResult SubirArchivo()
+        {
+            return View();
+        }
 
 
         [HttpPost("SubirArchivo")]
